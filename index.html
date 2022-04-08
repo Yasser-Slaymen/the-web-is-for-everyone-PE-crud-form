@@ -4,32 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>PE curd form</title>
 </head>
 <body>
-    <form class="form_contener" action="">
-        <section>
-            <label for="name">name</label>
-            <input type="text" id="name">
+    <main>
+        <h1>PE crud form</h1>
+        <section id="contener">
+            
+
+                <!-- form -->
+                <form class="form_contener" action="">
+                     
+                    <h3>Form toevoegen</h3>
+                    
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    
+
+                    
+                        <label for="town">Stad</label>
+                        <input type="text" id="town">
+                    
+
+                    
+                        <label for="time">Tijd</label>
+                        <input type="text" id="time">
+                     
+                    
+                    
+                        <label for="description">Omchrijven</label>
+                        <input type="text" id="description">
+
+                        <button class="btn__submit" type="submit">Submit</button>
+
+
+                    
+                    
+
+                </form>
+
+                 <!-- content -->
+                <article class="content">
+                    <h3>Form informatie</h3>
+                    <ul>
+                        <li>naam</li>
+                        <li>stad</li>
+                        <li>tijd</li>
+                        <li>omschrijven</li>
+                    </ul>
+
+                 </article>
+
+
         </section>
 
-        <section>
-            <label for="town">Stad</label>
-            <input type="text" id="town">
-        </section> 
-
-         <section>
-            <label for="time">Tijd</label>
-            <input type="text" id="time">
-        </section> 
-        
-        <section>
-            <label for="description">Omchrijven</label>
-            <input type="text" id="description">
-        </section>
-        
-
-    </form>
+    </main>
     
 </body>
 </html>
