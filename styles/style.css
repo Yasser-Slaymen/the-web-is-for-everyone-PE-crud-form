@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    max-width: 1020px;
+    margin:0 auto ;
+}
 
 main{
     margin: 0 auto;
@@ -14,17 +18,21 @@ h1{
 }
 #contener{
     display: flex;
-    place-items:center;
+    justify-content:center;
+    place-items: center;
     width: 40vw;
-    height: 40vh;
+    height: 45vh;
     background-color: black;
 
 }
 .form_contener{
-    margin: 2em;
     display: flex;
     flex-direction: column;
+    padding-right: 2em;
     color: rgb(249, 242, 242);
+}
+.none{
+    display: none;
 }
 
 label{
@@ -34,22 +42,31 @@ label{
 input{
     outline: none;
     height: 16px;
-    background-color: none;
+    background-color:transparent;
     border: none;
-    border-bottom: 1px solid rgb(10, 2, 2);
+    border-bottom: 1px solid white;
     
 }
 /* button submit */
 .btn__submit{
-    width: 5em;
+    width: 6em;
     margin: 0 auto;
-    margin-top: 1em;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    padding:.5em;
+    cursor: pointer;
 }
+.btn__submit:hover{
+    transform: translateY(3px);
+    box-shadow:0 2px 2px 2px rgb(119, 186, 241) ;
+}
+
 /* content */
 .content{
-    width:10vw;
+    padding-left: 2em;
     color: rgb(237, 244, 250);
 }
+
 .content ul{
     display: flex;
     flex-direction: column;
@@ -58,6 +75,6 @@ input{
 }
 
 li{
-    margin: .5em;
+    margin: 1.2em;
 }
 
