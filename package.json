@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  },
+  "name": "the-web-is-for-everyone-pe-crud-form",
+  "description": "> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)",
+  "version": "1.0.0",
+  "main": "main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "div": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yasser-Slaymen/the-web-is-for-everyone-PE-crud-form.git"
+  },
+  "author": "PE-crud-form",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yasser-Slaymen/the-web-is-for-everyone-PE-crud-form/issues"
+  },
+  "homepage": "https://github.com/Yasser-Slaymen/the-web-is-for-everyone-PE-crud-form#readme"
+}

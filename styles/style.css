@@ -20,9 +20,10 @@ h1{
     display: flex;
     justify-content:center;
     place-items: center;
-    width: 40vw;
-    height: 45vh;
+    width: 45vw;
+    height: 56vh;
     background-color: black;
+    box-shadow: 2px 2px 2px rgb(65, 64, 64);
 
 }
 .form_contener{
