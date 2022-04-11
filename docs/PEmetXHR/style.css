@@ -1,121 +1,81 @@
-:root {
-  --margin: 0;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-  background: #efefef;
-}
-body {
-  background: #fff;
-  color: #333;
-  font-family: Calibri, sans-serif;
-  font-size: 1.1em;
-  line-height: 140%;
-
-  max-width: 26em;
-  margin: 0 auto;
-  /* overflow-x: hidden; */
-  /* background: violet; */
-}
-header{
-  background: #ddd;
-  margin: 0;
-  padding: 2em;
-}
-header h1 {
-  margin: 0;
-  font-size: 4em;
-  line-height: 80%;
-}
-h2 {
-  margin: 1em 0;
+body{
+    max-width: 1020px;
+    margin:0 auto ;
 }
 
-
-main {
-  /* position: relative; */
-  display: flex;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  /* white-space: nowrap; */
-  overflow-x: hidden;
+main{
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
 }
-article{
-  /* position: absolute; */
-  flex-shrink: 0;
-  max-width: 26em;
-  margin: 0;
-  padding: 1em 2em;
-  /* transition: margin 1s ease-in; */
-  transition: margin 0.4s cubic-bezier(.66,1.66,.72,1.03);
-  /* background: pink; */
+h1{
+    margin: 2em;
 }
-article:first-child{
-  margin-left: calc(var(--margin)*-26em);
-  /* left: 26em; */
-}
-
-
-nav{
-  margin: 0;
-  margin-top: -1.5em;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-}
-nav a {
-    display: inline-block;
-    border-radius: 50%;
-    background: #333;
-    color: #fff;
-    width: 5em;
-    height: 5em;
-    text-decoration: none;
-    font-size: 0.8em;
-    text-align: center;
-    padding-top: 1.5em;
-    /* transition: transform 0.2s ease-in; */
-    transition: transform 0.3s cubic-bezier(.66,1.66,.72,1.03);
-}
-nav a:hover, nav a:focus{
-  border: 0.2em solid gold;
-  transform: scale(1.2);
-}
-.disabled{
-  visibility: hidden;
-}
-
-/*
-hyphens: hypenation
-
-Hoe werkt dit?
-https://css-tricks.com/almanac/properties/h/hyphenate/
-
-sowieso lang zetten op het element.
-lang=en of lang=nl
-en is default?
-
-Chrome en Opera doen niets hiermee
-http://caniuse.com/#search=hyphens
-
-*/
-code{
-  font-size: 1.2em;
-}
-main {
-  /*daar gaan we !*/
-  text-align: justify;
-
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word; /* Non standard for webkit */
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
+#contener{
+    display: flex;
+    justify-content:center;
+    place-items: center;
+    width: 45vw;
+    height: 56vh;
+    background-color: black;
+    box-shadow: 2px 2px 2px rgb(65, 64, 64);
 
 }
+.form_contener{
+    display: flex;
+    flex-direction: column;
+    padding-right: 2em;
+    color: rgb(249, 242, 242);
+}
+.none{
+    display: none;
+}
+
+label{
+    margin-top:1em ;
+}
+
+input{
+    outline: none;
+    height: 16px;
+    background-color:transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    
+}
+/* button submit */
+.btn__submit{
+    width: 6em;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 1.5em;
+    padding:.5em;
+    cursor: pointer;
+}
+.btn__submit:hover{
+    transform: translateY(3px);
+    box-shadow:0 2px 2px 2px rgb(119, 186, 241) ;
+}
+
+/* content */
+.content{
+    padding-left: 2em;
+    color: rgb(237, 244, 250);
+}
+
+.content ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+}
+
+li{
+    margin: 1.2em;
+}
+
