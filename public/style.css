@@ -86,4 +86,10 @@ li{
     height: 50vh;
     color: rgb(5, 5, 4);
 }
-
+.form-add{
+    background-color: black;
+    margin: 3em;
+    padding: 2em;
+    width: 50vw;
+    height: 70vh;
+}

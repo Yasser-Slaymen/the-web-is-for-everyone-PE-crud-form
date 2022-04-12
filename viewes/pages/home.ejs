@@ -4,27 +4,27 @@
     
 
         <!-- form -->
-        <form class="form_contener" action="https://codingthecurbs.api.fdnd.nl/v1/smartzone" method="post">
+        <form class="form_contener" action="/" method="post">
              
             <h3>Form toevoegen</h3>
 
                 <section class="none">
                     <label for="SmartzonezoneId">Smartzone</label>
-                    <input type="text" id="smartzoneId">
+                    <input type="text" name="smartzonesId" id="smartzoneId">
                 </section>
             
                 <label for="name">Name</label>
-                <input type="text" id="name">
+                <input type="text" name="name" id="name">
             
 
             
                 <label for="town">Stad</label>
-                <input type="text" id="town">
+                <input type="text" name="town" id="town">
 
 
                 
                 <label for="location">Locatie</label>
-                <input type="text" id="location">
+                <input type="text"  name="location" id="location">
 
 
                 <section class="none">
@@ -33,7 +33,7 @@
                 </section>
             
                 <label for="time">Tijd</label>
-                <input type="text" id="time">
+                <input type="text" name="time" id="time">
 
                 <section class="none">
 
@@ -73,11 +73,18 @@
 
             <ul>
                 <% smartzones.forEach(function(smartzone) { %>
-                        <li><span><%- smartzone.name %> </span> Naam</li>
-                        <li> <span><%- smartzone.town  %> </span> Stad </li>
-                        <li><span><%- smartzone.time %> </span> Tijd</li>
-                        <li> <span><%- smartzone.description %></span> Omschrijven</li>
-                    <% }) %>
+                    <%    smartzones.filter(smartzone => smartzone.name === 'Wafa') 
+                     .map(smartzone =>{%> 
+                    
+
+                                    <li>Naam <%- smartzone.name %></li>
+                                    <li>Stad <%- smartzone.town  %> </li>
+                                    <li>Tijd <%- smartzone.time %> </li>
+                                    <li>Omschrijven <%- smartzone.description %></li>
+
+                     <%}) %>
+
+                <% }) %>
                 
             </ul>
         
