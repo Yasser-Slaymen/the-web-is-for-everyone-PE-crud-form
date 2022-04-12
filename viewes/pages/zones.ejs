@@ -1,0 +1,19 @@
+<%- include('../includes/head') %>
+<h1>PE crud form</h1>
+ <!-- content -->
+ <article class="content__zones">
+
+    <h3>Form informatie</h3>
+    <ul>
+        <% zones.forEach(function(zone) { %>
+                <li><span><%- zone.name %> </span> Naam</li>
+                <li> <span><%- zone.town  %> </span> Stad </li>
+                <li><span><%- zone.time %> </span> Tijd</li>
+                <li> <span><%- zone.description %> </span> Omschrijven</li>
+            <% }) %>
+        
+    </ul>
+
+</main>   
+</body>
+</html>

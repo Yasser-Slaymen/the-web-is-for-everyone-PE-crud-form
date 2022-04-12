@@ -70,15 +70,30 @@
          <!-- content -->
         <article class="content">
             <h3>Form informatie</h3>
+
             <ul>
-                <li><span></span> Naam <%- home.name %> </li>
-
-                <!-- <li><span></span> Naam</li> -->
-                <li> <span></span> Stad </li>
-                <li><span></span> Tijd</li>
-                <li> <span></span> Omschrijven</li>
+                <% smartzones.forEach(function(smartzone) { %>
+                        <li><span><%- smartzone.name %> </span> Naam</li>
+                        <li> <span><%- smartzone.town  %> </span> Stad </li>
+                        <li><span><%- smartzone.time %> </span> Tijd</li>
+                        <li> <span><%- smartzone.description %></span> Omschrijven</li>
+                    <% }) %>
+                
             </ul>
-
+        
+            
+                <!-- <ul>
+                    
+                        <li><span> </span> Naam</li>
+                        <li> <span></span> Stad </li>
+                        <li><span></span> Tijd</li>
+                        <li> <span></span> Omschrijven</li>
+                    
+        
+                </ul> -->
+    
+           
+            
          </article>
 
 

@@ -79,3 +79,11 @@ li{
     margin: 1.2em;
 }
 
+/* test */
+.content__zones{
+    
+    width: 50vw;
+    height: 50vh;
+    color: rgb(5, 5, 4);
+}
+
