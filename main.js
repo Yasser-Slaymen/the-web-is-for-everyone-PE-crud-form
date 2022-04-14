@@ -42,6 +42,27 @@ app.get('/zones', (req, res) => {
   })
 
 // Methode:post
+// Home page POST
+app.post('/', urlencodedParser, (request, response)=>{
+  const postData = {
+    method:'POST',
+    body:JSON.stringify(request.body),
+    headers:{'Content-Type':'application/json'}
+  }
+  
+  fetchJson(BaseUrl, postData).then(function () {
+    response.render('pages/home',{
+      title:'add new smartzone'
+    })
+  })
+})
+//  renderen  page add in de link
+app.get('/home',(request,response) => {
+    response.render('pages/home', {
+        title: 'edite',
+    })
+})
+// Add POST
 app.post('/add', urlencodedParser, (request, response)=>{
   const postData = {
     method:'POST',
@@ -55,7 +76,7 @@ app.post('/add', urlencodedParser, (request, response)=>{
     })
   })
 })
-//  renderen  page put in de link
+//  renderen  page add in de link
 app.get('/add',(request,response) => {
     response.render('pages/add', {
         title: 'edite',
