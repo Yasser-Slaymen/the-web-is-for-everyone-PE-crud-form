@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const { application } = require('express')
-// const port = process.env.PORT || 3000
+app.set('port', process.env.PORT ||3000 )
 const BaseUrl = 'https://codingthecurbs.api.fdnd.nl/v1/smartzone'
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args))
 // Create application/form-urlen coded parser
@@ -30,16 +30,6 @@ app.get('/',(request, response) =>{
 
     
 })
-// page for testing
-app.get('/zones', (req, res) => {
-    fetchJson('https://codingthecurbs.api.fdnd.nl/v1/smartzone').then(function (jsonData) {
-      console.log(jsonData)
-      res.render('pages/zones', {
-        title: 'Dit is zones pagina',
-        zones: jsonData.data,
-      })
-    })
-  })
 
 // Methode:post
 // Home page POST
@@ -62,28 +52,8 @@ app.get('/home',(request,response) => {
         title: 'edite',
     })
 })
-// Add POST
-app.post('/add', urlencodedParser, (request, response)=>{
-  const postData = {
-    method:'POST',
-    body:JSON.stringify(request.body),
-    headers:{'Content-Type':'application/json'}
-  }
-  
-  fetchJson(BaseUrl, postData).then(function () {
-    response.render('pages/add',{
-      title:'add new smartzone'
-    })
-  })
-})
-//  renderen  page add in de link
-app.get('/add',(request,response) => {
-    response.render('pages/add', {
-        title: 'edite',
-    })
-})
 
-app.set('port', process.env.PORT ||3000 )
+
 
 const server = app.listen(app.get('port'), () => {
   console.log(`Application started on port: ${app.get('port')}`)
@@ -95,12 +65,46 @@ async function fetchJson(BaseUrl, postData = {}) {
     .then((response) => response.json())
     .catch((error) => error)
 }
-// for get method
-// async function fetchJson(url) {
-//     return await fetch(url)
-//       .then((response) => response.json())
-//       .catch((error) => error)
-//   }
-// app.listen(port, function(){
-//     console.log(`listening to port ${port}`)
-// })
+
+// pages for testing
+
+            // app.get('/zones', (req, res) => {
+            //   fetchJson('https://codingthecurbs.api.fdnd.nl/v1/smartzone').then(function (jsonData) {
+            //     console.log(jsonData)
+            //     res.render('pages/zones', {
+            //       title: 'Dit is zones pagina',
+            //       zones: jsonData.data,
+            //     })
+            //   })
+            // })
+
+
+            // Add POST
+            // app.post('/add', urlencodedParser, (request, response)=>{
+            //   const postData = {
+            //     method:'POST',
+            //     body:JSON.stringify(request.body),
+            //     headers:{'Content-Type':'application/json'}
+            //   }
+              
+            //   fetchJson(BaseUrl, postData).then(function () {
+            //     response.render('pages/add',{
+            //       title:'add new smartzone'
+            //     })
+            //   })
+            // })
+            //  renderen  page add in de link
+            // app.get('/add',(request,response) => {
+            //     response.render('pages/add', {
+            //         title: 'edite',
+            //     })
+            // })
+            // for get method
+            // async function fetchJson(url) {
+            //     return await fetch(url)
+            //       .then((response) => response.json())
+            //       .catch((error) => error)
+            //   }
+            // app.listen(port, function(){
+            //     console.log(`listening to port ${port}`)
+            // })
