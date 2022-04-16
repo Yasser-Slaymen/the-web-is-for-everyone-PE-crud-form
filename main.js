@@ -80,25 +80,25 @@ async function fetchJson(BaseUrl, postData = {}) {
 
 
             // Add POST
-            // app.post('/add', urlencodedParser, (request, response)=>{
-            //   const postData = {
-            //     method:'POST',
-            //     body:JSON.stringify(request.body),
-            //     headers:{'Content-Type':'application/json'}
-            //   }
+            app.post('/add', urlencodedParser, (request, response)=>{
+              const postData = {
+                method:'POST',
+                body:JSON.stringify(request.body),
+                headers:{'Content-Type':'application/json'}
+              }
               
-            //   fetchJson(BaseUrl, postData).then(function () {
-            //     response.render('pages/add',{
-            //       title:'add new smartzone'
-            //     })
-            //   })
-            // })
+              fetchJson(BaseUrl, postData).then(function () {
+                response.render('pages/add',{
+                  title:'add new smartzone'
+                })
+              })
+            })
             //  renderen  page add in de link
-            // app.get('/add',(request,response) => {
-            //     response.render('pages/add', {
-            //         title: 'edite',
-            //     })
-            // })
+            app.get('/add',(request,response) => {
+                response.render('pages/add', {
+                    title: 'edite',
+                })
+            })
             // for get method
             // async function fetchJson(url) {
             //     return await fetch(url)

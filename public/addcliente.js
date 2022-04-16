@@ -1,9 +1,22 @@
+// loading state
+let sprinnerWrapper = document.querySelector('.spinner-wrapper')
+setTimeout(() =>{
+    hidePreloader();
+}, 500)
+
+function hidePreloader() {
+    sprinnerWrapper.style.display = "none"
+}
+// End loading state
+
 // Methode:post
 const Url = 'https://codingthecurbs.api.fdnd.nl/v1'
 const formPost = document.querySelector('.form_contener')
 
 formPost.addEventListener('submit', (post) => {
     post.preventDefault()
+   
+    
     let data = {
         smartzoneId: document.querySelector('#smartzoneId').value,
         name: document.querySelector('#name').value,
@@ -28,5 +41,8 @@ formPost.addEventListener('submit', (post) => {
     })
     .then(res => res.json())
     .then(data => renderMember(data))
-    .catch( (error) =>console.log('Error'))   
+    .catch( (error) =>console.log('Error')) 
+    
+    
+         
 })
