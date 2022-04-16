@@ -21,10 +21,10 @@ function renderMember(data){
     content.innerHTML +=`
             <h3>Form informatie</h3>
             <ul>
-                <li><span></span>Naam ${data.data[0].name}</li>
-                <li> <span></span>Stad ${data.data[0].town} </li>
-                <li> <span></span> locatie ${data.data[0].location}</li>
-                <li><span></span>Tijd ${data.data[0].time}</li>
+                <li><span></span>Naam ${data.data[2].name}</li>
+                <li> <span></span>Stad ${data.data[2].town} </li>
+                <li> <span></span> locatie ${data.data[2].location}</li>
+                <li><span></span>Tijd ${data.data[2].time}</li>
 
             </ul>`
 }

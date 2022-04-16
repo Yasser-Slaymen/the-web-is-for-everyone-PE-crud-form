@@ -5,15 +5,16 @@
 
     <h3>Form informatie</h3>
     <ul>
-        <% zones.forEach(function(zone) { %>
-                <li><span><%- zone.name %> </span> Naam</li>
-                <li> <span><%- zone.town  %> </span> Stad </li>
-                <li><span><%- zone.time %> </span> Tijd</li>
-                <li> <span><%- zone.description %> </span> Omschrijven</li>
-            <% }) %>
+        
+                <li><span><%- zones[1].name %> </span> Naam</li>
+                <li> <span><%- zones[1].town  %> </span> Stad </li>
+                <li><span><%- zones[1].time %> </span> Tijd</li>
+                <li> <span><%- zones[1].description %> </span> Omschrijven</li>
+           
         
     </ul>
-
+  </article>
+    <!-- <p>    <% zones.forEach((zone) =>{ %> <% }) %></p> -->
 </main>   
 </body>
 </html>

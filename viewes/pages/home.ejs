@@ -72,39 +72,31 @@
             <h3>Form informatie</h3>
 
             <ul>
-                <% smartzones.forEach(function(smartzone) { %>
-                    <%    smartzones.filter(smartzone => smartzone.name === 'Wafa') 
-                     .map(smartzone =>{%> 
+               
                     
 
-                                    <li>Naam <%- smartzone.name %></li>
-                                    <li>Stad <%- smartzone.town  %> </li>
-                                    <li>Tijd <%- smartzone.time %> </li>
-                                    <li>Omschrijven <%- smartzone.description %></li>
+                                    <li>Naam <%- smartzones[1].name %></li>
+                                    <li>Stad <%- smartzones[1].town  %> </li>
+                                    <li>Tijd <%- smartzones[1].time %> </li>
+                                    <li>Omschrijven <%- smartzones[1].description %></li>
 
-                     <%}) %>
-
-                <% }) %>
+                   
                 
             </ul>
         
             
-                <!-- <ul>
-                    
-                        <li><span> </span> Naam</li>
-                        <li> <span></span> Stad </li>
-                        <li><span></span> Tijd</li>
-                        <li> <span></span> Omschrijven</li>
-                    
-        
-                </ul> -->
-    
+               
            
             
          </article>
 
 
 </section>
+<!-- juste for Exampel werk niet -->
+<!-- <p> <% smartzones.forEach(function(smartzone) { %>
+    <%    smartzones.filter(smartzone => smartzone.name === 'Wafa') 
+     .map(smartzone =>{%>   <%}) %><% }) %>
+</p> -->
 
 </main>
 
