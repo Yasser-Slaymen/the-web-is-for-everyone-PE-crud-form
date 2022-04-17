@@ -6,6 +6,7 @@
 
 ## Wireflow
 <!-- Toon hier de Wirefllow -->
+![WhatsApp Image 2022-04-17 at 10 44 31 PM (2)](https://user-images.githubusercontent.com/90189815/163731559-1121f42a-22ec-4940-a7f7-6355752e5895.jpeg)
 
 ## Breakdown
 <!-- Toon hier de Breakdown met de pseudo code en de verschillende lagen van Progressive enhancement -->
